@@ -1,0 +1,189 @@
+
+/* Обнуление стилей */
+*,
+*::before *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+html,body {
+    height: 100%;
+}
+
+/* По умолчанию 16 рх */
+html {
+    font-size: 16px;
+}
+
+body {
+  line-height: 1;
+}
+ 
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+/* .........Lesson5 ........ */
+
+.block {
+    background-color: blue;
+    border-top: 10px dashed #000;
+    border-left: 15px solid red;
+    border-right:12px double yellow;
+    border-bottom: 13px dotted rgb(17, 240, 84);
+    width: 200px;
+    outline: 5px solid hotpink;
+    margin: 20px;
+}
+
+.inline {
+    display: inline-block;
+background-color: brown;
+outline: 5px solid hotpink;
+border: 10px double yellowgreen;
+}
+
+.text-link {
+    color: green;
+    border: 2px dashed;
+    display: inline-block;
+}
+
+.text-link:hover {
+    color: red;
+}
+
+
+
+/* hover 
+Определяет стиль элемента при наведении на него курсора мыши, 
+но при этом элемент еще не активирован, иными словами кнопка мыши не нажата.*/
+
+/* 
+.link {
+    display: inline-block;
+    background-color: rgb(19, 240, 107);
+  color: #fff
+  padding: 15px;
+  border: 5px solid red;
+}
+
+.link:hover {
+    border: none;
+} */
+
+
+/* border 
+Универсальное свойство border позволяет одновременно установить толщину стиль и цвет
+границы вокруг элемента.
+border : 1px solid #000; (размер, стиль, цвет)
+Основные стили - solid, dotted, dashed 
+*/
+/* Cинтаксис общего свойства:
+border: толщина_линии, стиль_линии, цвет_линии
+*/
+
+
+/* outline
+Универсальное свойство, одновременно устанавливает цвет, стиль и толщину внешней границы 
+наа всех четырех сторонах элемента.
+В отличии от линни, задаваемой через border, свойства outline не влиет на положение
+блока и их ширину.
+Также нельзя задать параметры линии на отдельных сторонах элемента, 
+outline применяется сразу ко всем четырём сторонам элемента.
+*/
+
+.radius {
+    background-color: gray;
+    color: honeydew;
+    border-radius: 15px 50px 15px 15px;
+    width: 500px;
+    padding: 10px;
+    margin-top: 15px;
+     box-shadow: inset 10px 10px 10px black;
+   
+}
+
+.radius_2 {
+    background-color: rgb(209, 52, 0,5);
+    color: black;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    box-shadow:10px 10px 30px 10px green;
+    opacity: 0.6;
+}
+
+
+
+
+
+/* border-radius
+Устанавливает радиус скругления углов блока.
+border-radius: 50%; - круг
+Можно использовать вместе с overflow: hidden;
+*/
+
+
+/* Генератор Бордер радиуса */
+/* https://9elements.github.io/fancy-border-radius/#0.100.100.30--. */
+
+
+/* box-shadow
+Добавляет тень к элементу.
+box-shadow: сдвиг_по горзонт, сдвиг_по вертикали, радиус, расстояние.
+Можно добваить много теней. На тень влиет свойство dorder-radius.
+filte: drop-shadow (0px 0px 10px #000)
+
+box-shadow: inset устнавливает тень внутри элемента.
+box-shadow: inset 10px 10px 10px black;
+*/
+
+/* opacity
+Определяет уровень прозрачности элементa.
+Отличие opacity:0 от diasplay:none, в том что блок не убирается из верстки а только
+становится прозрачнім, занимемое им место остается. Так же с прозрачным элементом все ещё
+можно взаитмодействовать. Например кликать по ссылке.
+*/
+
+/* visibility
+Предназначен для отображения или скрытия элемента.
+Отличие visibility: hidden; от display:none в том что блок не убирается из 
+верстки, а только скрывается, то есть занимаемое им место остается.
+Отличие visibility: hidden; от opacity; 0 в том что блок скрывается и взаимодействовать 
+с ним нельзя.
+*/
